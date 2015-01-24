@@ -11,5 +11,8 @@ func main() {
 	goji.Get("/site/:name", handlers.Site)
 	goji.Get("/about", handlers.About)
 
+	goji.Get("/admin/newsite", handlers.NewSite)
+	goji.Post("/admin/newsite", handlers.RegisterSite)
+
 	goji.Serve()
 }
