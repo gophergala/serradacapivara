@@ -1,4 +1,4 @@
-package entities
+package db
 
 type Site struct {
 	Id              int    `db:"id"`
