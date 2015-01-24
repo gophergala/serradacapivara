@@ -7,7 +7,6 @@ import (
 	"net/http"
 
 	"github.com/gophergala/serradacapivara/db"
-	"github.com/gorilla/schema"
 	"github.com/zenazn/goji/web"
 )
 
@@ -75,49 +74,4 @@ func About(c web.C, w http.ResponseWriter, r *http.Request) {
 	}
 
 	t.Execute(w, nil)
-}
-
-// Admin Handlers
-
-func NewSite(c web.C, w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles("templates/admin/new_site.go.html")
-
-	if err != nil {
-		log.Println(err)
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-		return
-	}
-
-	t.Execute(w, nil)
-}
-
-func RegisterSite(c web.C, w http.ResponseWriter, r *http.Request) {
-	err := r.ParseForm()
-
-	if err != nil {
-		log.Println(err)
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-		return
-	}
-
-	var site db.Site
-
-	decoder := schema.NewDecoder()
-
-	err = decoder.Decode(&site, r.PostForm)
-
-	if err != nil {
-		log.Println(err)
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-		return
-	}
-
-	log.Println("%+v", site)
-
-	// Validações
-
-	if err := db.SaveSite(site); err != nil {
-		log.Println(err)
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-	}
 }
