@@ -24,6 +24,7 @@ type Site struct {
 	Circuit         string
 	NationalPark    string
 	Location        string
+	Description     string
 	Pictures        []string
 }
 

@@ -11,11 +11,17 @@
 		function initialize() {
 			var mapOptions = {
 				scrollwheel: false,
-				zoom: 8,
-				center: new google.maps.LatLng(-34.397, 150.644)
+				zoom: 14,
+				center: new google.maps.LatLng({{.Latitude}}, {{.Longitude}})
 			};
-			map = new google.maps.Map(document.getElementById('map-canvas'),
-				mapOptions);
+
+			map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+			marker = new google.maps.Marker({
+          position: new google.maps.LatLng({{.Latitude}}, {{.Longitude}}),
+          map: map,
+          title:{{.Name}}
+        });
 		}
 
 		google.maps.event.addDomListener(window, 'load', initialize);
@@ -39,10 +45,9 @@
 					</ul>
 
 					<ul id="slide-out" class="side-nav full">
-						<li><a href="#">ABOUT US</a></li>
-						<li><a href="#">HELP US</a></li>
-						<li><a href="#">SEARCH</a></li>
-						<li><a href="#">FAQ</a></li>
+						<li><a href="/about">ABOUT US</a></li>
+						<li><a href="/search">SEARCH</a></li>
+						<li><a href="/faq">FAQ</a></li>
 					</ul>
 
 					<a href="javascript:history.back();">
@@ -60,19 +65,19 @@
 					<h1 class="header col s12 white-text">
 						{{.Name}}
 					</h1>
-					<a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light deep-orange darken-4">VIEW GALLERY</a>
+					<a href="#info" id="download-button" class="btn-large waves-effect waves-light deep-orange darken-4">VIEW GALLERY</a>
 					<p class="col s12 white-text">
 						<div class="col s4">
-							<p class="white-text center"><b>Parque nacional:</b><br>
-								Parque 1</p>
+							<p class="white-text center"><b>National Park:</b><br>
+								{{.NationalPark}}</p>
 							</div>
 							<div class="col s4">
-								<p class="white-text center"><b>Cidade:</b><br>
-									Cidade 2</p>
+								<p class="white-text center"><b>City:</b><br>
+									{{.City}}</p>
 								</div>
 								<div class="col s4">
-									<p class="white-text center"><b>Ano de descoberta:</b><br>
-										1920</p>
+									<p class="white-text center"><b>Year of discovery:</b><br>
+										{{.YearOfDiscovery}}</p>
 									</div>
 								</p>
 							</div>
@@ -85,12 +90,12 @@
 				<div class="container">
 					<div class="section">
 
-						<div class="row">
+						<div class="row" id="info">
 							<div class="col s12 center">
 								<h3><i class="mdi-action-help deep-orange-text darken-4"></i></h3>
-								<h4>Informações</h4>
+								<h4>Info</h4>
 								<p class="left-align light">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+								  {{.Description}}
 								</p>
 							</div>
 						</div>
@@ -98,9 +103,17 @@
 					</div>
 				</div>
 
+				<div class="container margin-bottom">
+					<section id="gallery">
+						<div class="row">
+							{{ range $i, $url := .Pictures }}
+								<img class="materialboxed col s6 m4 l2 responsive-img" src="{{$url}}" >
+							{{ end }}
+						</div>
+					</section>
+				</div>
 
 				<div id="map-canvas"></div>
-
 
 				<footer class="page-footer">
 					<div class="footer-copyright">
@@ -118,6 +131,7 @@
 					$(document).ready(function(){
 						$('.parallax').parallax();
 						$('.button-menu').sideNav();
+						$('.materialboxed').materialbox();
 					});
 				</script>
 			</body>
