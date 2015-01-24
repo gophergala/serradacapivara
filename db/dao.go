@@ -24,7 +24,7 @@ func SaveSite(site Site) error {
 	}
 
 	tx := d.MustBegin()
-	if _, err := tx.NamedExec("INSERT INTO sites (name, has_picture, has_engraving, other, is_historic, year_of_discovery, city_id, circuit_id, national_park_id, location_id) VALUES (:name, :has_picture, :has_engraving, :other, :is_historic, :year_of_discovery, :city_id, :circuit_id, :national_park_id, :location_id)", site); err != nil {
+	if _, err := tx.NamedExec("INSERT INTO Sites (Name, HasPicture, HasEngraving, Other, IsHistoric, YearOfDiscovery, City, Circuit, NationalPark, Location) VALUES (:Name, :HasPicture, :HasEngraving, :Other, :IsHistoric, :YearOfDiscovery, :City, :Circuit, :NationalPark, :Location)", site); err != nil {
 		log.Fatalln(err)
 		return err
 	}
