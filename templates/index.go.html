@@ -14,13 +14,12 @@
 			<div class="container">
 				<div class="nav-wrapper">
 
-					<a id="logo-container" href="#" class="brand-logo thin-text">Serra da Capivara</a>
+					<a id="logo-container" href="/" class="brand-logo thin-text">Serra da Capivara</a>
 
 					<ul id="slide-out" class="side-nav full">
-						<li><a href="#">ABOUT US</a></li>
-						<li><a href="#">HELP US</a></li>
-						<li><a href="#">SEARCH</a></li>
-						<li><a href="#">FAQ</a></li>
+						<li><a href="/about">ABOUT</a></li>
+						<li><a href="#index-banner">SEARCH</a></li>
+						<li><a href="/faq">FAQ</a></li>
 					</ul>
 
 					<a href="#" data-activates="slide-out" class="button-menu">
@@ -39,8 +38,9 @@
 				</div>
 				<div class="col s12 m6">
 					<h1 class="white-text">Serra da Capivara</h1>
-					<p class="white-text opaque">The Serra da Capivara National Park is an archaeological conservation area with a wealth of remains that have been preserved for millennia.</p>
-					<a href="#" class="waves-effect waves-dark btn white red-text">Go about us</a>
+					<p class="white-text opaque">
+					  Serra da Capivara National Park is a national park in the Northeastern region of Brazil. It has many prehistoric paintings. The park was created to protect the prehistoric artifacts and paintings found there. It became a World Heritage Site in 1991.</p>
+					<a href="/sites" class="waves-effect waves-dark btn white red-text">I want to know more</a>
 				</div>
 			</div>
 			<a class="btn-floating btn-large waves-effect waves-light white">
@@ -56,7 +56,7 @@
 					<h1 class="header col s12 white-text">
 						Special places need to be shown
 					</h1>
-					<a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light red">HELP US</a>
+					<a href="/sites" id="download-button" class="btn-large waves-effect waves-light red">See all sites</a>
 				</div>
 			</div>
 		</div>
@@ -69,15 +69,16 @@
 		<div class="container">
 			<br><br>
 			<div class="row center">
-				<h5 class="header col s12 light">Pesquisar por sitios e tals</h5>
+				<h5 class="header col s12 light">Search sites</h5>
 			</div>
 			<div class="row center">
-				<div class="input-field col s12">
-					<input id="first_name" type="text" class="validate">
-					<label for="first_name">Search for Title, description or tags.</label>
-				</div>
-
-				<a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light red">SEARCH NOW</a>
+			  <div class="input-field col s12">
+				<form method="GET" action="/search">
+				  <input id="search_input" type="text" class="validate" name="q" />
+				  <label for="search_input">Search for Title.</label>
+				  <input type="submit" value="SEARCH NOW" class="btn-large waves-effect waves-light red"/>
+				</form>
+			  </div>
 			</div>
 			<br><br>
 
@@ -87,7 +88,7 @@
 	<footer class="page-footer">
 		<div class="footer-copyright">
 			<div class="container">
-				Make with Go, Love, Doritos and <a class="deep-orange-text darken-4" href="http://materializecss.com">Materialize</a>
+				Made with Go, Love, Doritos and <a class="deep-orange-text darken-4" href="http://materializecss.com">Materialize</a>
 			</div>
 		</div>
 	</footer>
