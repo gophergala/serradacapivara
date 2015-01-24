@@ -78,6 +78,24 @@
                             </p>
                         </div>
                         </p>
+
+                        <p class="col s12 white-text">
+                        <div class="col s4">
+                            <p class="white-text center"><b>Circuit:</b><br>
+                                {{.Circuit}}
+                            </p>
+                        </div>
+                        <div class="col s4">
+                            <p class="white-text center"><b>Location:</b><br>
+                                {{.Location}}
+                            </p>
+                        </div>
+                        <div class="col s4">
+                            <p class="white-text center"><b>Geo:</b><br>
+                                ({{.Latitude}}, {{.Longitude}})
+                            </p>
+                        </div>
+                        </p>
                     </div>
                 </div>
             </div>
