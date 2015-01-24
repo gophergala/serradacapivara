@@ -1,5 +1,5 @@
 ## Run ##
 
 ```console
-$ SQLX_POSTGRES="user=claudemiro dbname=serradacapivara sslmode=disable" ./serradacapivara
+$ DATABASE_URL="user=claudemiro dbname=serradacapivara sslmode=disable" ./serradacapivara
 ```

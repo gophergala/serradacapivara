@@ -10,7 +10,7 @@ import (
 )
 
 func connect() (*sqlx.DB, error) {
-	connString := os.Getenv("SQLX_POSTGRES")
+	connString := os.Getenv("DATABASE_URL")
 	return sqlx.Connect("postgres", connString)
 }
 
@@ -24,7 +24,29 @@ func SaveSite(site Site) error {
 	}
 
 	tx := d.MustBegin()
-	if _, err := tx.NamedExec("INSERT INTO Sites (Name, HasPicture, HasEngraving, Other, IsHistoric, YearOfDiscovery, City, Circuit, NationalPark, Location) VALUES (:Name, :HasPicture, :HasEngraving, :Other, :IsHistoric, :YearOfDiscovery, :City, :Circuit, :NationalPark, :Location)", site); err != nil {
+	if _, err := tx.NamedExec(`INSERT INTO Sites (
+                                  Name,
+                                  HasPicture,
+                                  HasEngraving,
+                                  Other,
+                                  IsHistoric, 
+                                  YearOfDiscovery,
+                                  City,
+                                  Circuit,
+                                  NationalPark,
+                                  Location)
+                                  VALUES (
+                                     :Name,
+                                     :HasPicture,
+                                     :HasEngraving,
+                                     :Other,
+                                     :IsHistoric,
+                                     :YearOfDiscovery,
+                                     :City,
+                                     :Circuit,
+                                     :NationalPark,
+                                     :Location
+                                  )`, site); err != nil {
 		log.Fatalln(err)
 		return err
 	}

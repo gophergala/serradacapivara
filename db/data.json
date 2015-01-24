@@ -1,0 +1,20 @@
+[
+	{
+		"Id": "boqueirao-da-pedra-furada",
+		"Name": "Boqueirão da Pedra furada",
+		"HasPicture": true,
+		"HasEngraving": true,
+		"IsHistoric": false,
+		"YearOfDiscovery": 2012,
+		"Latitude": "23456545",
+		"Longitude": "-21243iu32i",
+		"City": "São Raimundo Nonato",
+		"Circuit": "Sei la",
+		"NationalPark": "alguma coisa",
+		"Location": "Alguma coisa também",
+		"Pictures": [
+			"http://....algumacoisa.jpg",
+			"http://....algumacoisa.png"
+		]
+	}
+]

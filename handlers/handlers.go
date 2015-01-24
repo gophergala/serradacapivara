@@ -11,20 +11,70 @@ import (
 	"github.com/zenazn/goji/web"
 )
 
+// Index is the website homepage
 func Index(c web.C, w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, Serra da Capivara!")
+	t, err := template.ParseFiles("templates/index.go.html")
+
+	if err != nil {
+		log.Println(err)
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		return
+	}
+
+	t.Execute(w, nil)
 }
 
+// Search is the page where the results of search are shown
+func Search(c web.C, w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("templates/search.go.html")
+
+	if err != nil {
+		log.Println(err)
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		return
+	}
+
+	t.Execute(w, nil)
+}
+
+// Map is the page where all sites are shown at once
 func Map(c web.C, w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Map")
 }
 
+// Site is the page that describe the given site
 func Site(c web.C, w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Site, %s", c.URLParams["name"])
+	t, err := template.ParseFiles("templates/site.go.html")
+
+	if err != nil {
+		log.Println(err)
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		return
+	}
+
+	site, err := db.FindByID(c.URLParams["id"])
+
+	if err != nil {
+		log.Println(err)
+		http.Error(w, "Not Found", http.StatusNotFound)
+		return
+
+	}
+
+	t.Execute(w, site)
 }
 
+// About the project
 func About(c web.C, w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "About")
+	t, err := template.ParseFiles("templates/about.go.html")
+
+	if err != nil {
+		log.Println(err)
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		return
+	}
+
+	t.Execute(w, nil)
 }
 
 // Admin Handlers
@@ -34,7 +84,7 @@ func NewSite(c web.C, w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		log.Println(err)
-		http.NotFound(w, r)
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 		return
 	}
 
