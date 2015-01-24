@@ -8,6 +8,8 @@ type Site struct {
 	Other           bool   `db:"other"`
 	IsHistoric      bool   `db:"is_historic"`
 	YearOfDiscovery int    `db:"year_of_discovery"`
+	Latitude        string `db:"latitude"`
+	Longitude       string `db:"longitude"`
 
 	CityId         int `db:"city_id"`
 	CircuitId      int `db:"circuit_id"`
