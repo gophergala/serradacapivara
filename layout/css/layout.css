@@ -1,0 +1,56 @@
+@import url('materialize.min.css');
+
+h1, h2, h3, h4, h5, .thin-text{
+	font-weight: 100;
+}
+.primaryDark{
+	background-color: #BF360C!important;
+}
+nav.transparent{
+	background-color: #BF360C!important;
+}
+#index-banner, #index-banner .container{
+	height: 100%!important;
+}
+.info-page{
+	background: url('../assets/background-index.jpg') no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.info-page .btn-floating{
+	position: absolute;
+	left: 50%;
+	bottom: -40px;
+	margin-left: -28px;
+}
+.row-container{
+	padding: 26px 0;
+}
+.row{margin-bottom: 0;}
+.opaque{
+	opacity: 0.8;
+}
+.mdi-navigation-menu:before {
+	content: "\e8a1";
+}
+footer.page-footer{
+	background: #FFF;
+	padding-top: 0;
+}
+.footer-copyright{
+	color: #999!important;
+}
+ul.side-nav{
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	-moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+@media only screen and (min-width : 993px){
+	.row-container{
+		padding: 100px 0;
+	}
+	nav .brand-logo{
+		margin-left: 40px;
+	}
+
+}
