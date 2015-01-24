@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"github.com/gophergala/serradacapivara/handlers"
+	"github.com/zenazn/goji"
+)
 
 func main() {
-	fmt.Println("Serra da Capivara")
+	goji.Get("/", handlers.Index)
+	goji.Serve()
 }
