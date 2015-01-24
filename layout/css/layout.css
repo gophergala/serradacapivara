@@ -30,6 +30,11 @@ nav.transparent{
 .opaque{
 	opacity: 0.8;
 }
+#map-canvas {
+	height: 450px;
+	margin: 0px;
+	padding: 0px
+}
 .mdi-navigation-menu:before {
 	content: "\e8a1";
 }
@@ -40,7 +45,7 @@ footer.page-footer{
 .footer-copyright{
 	color: #999!important;
 }
-ul.side-nav{
+ul.side-nav.full{
 	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 	-moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
@@ -52,5 +57,7 @@ ul.side-nav{
 	nav .brand-logo{
 		margin-left: 40px;
 	}
-
+	nav ul li:hover, nav ul li.active {
+		background-color: rgba(0,0,0,0)!important;
+	}
 }
