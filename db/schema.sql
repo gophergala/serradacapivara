@@ -32,3 +32,5 @@ CREATE TABLE IF NOT EXISTS sites (
   national_park_id integer REFERENCES national_parks(id),
   location_id      integer REFERENCES locations(id)
 );
+
+CREATE EXTENSION unaccent;
