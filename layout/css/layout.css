@@ -15,9 +15,6 @@ h1, h2, h3, h4, h5, .thin-text{
 nav.transparent{
 	background-color: #BF360C!important;
 }
-#index-banner, #index-banner .container{
-	height: 100%!important;
-}
 .info-page{
 	background: url('../assets/background-index.jpg') no-repeat;
 	background-size: cover;
@@ -28,6 +25,10 @@ nav.transparent{
 	left: 50%;
 	bottom: -40px;
 	margin-left: -28px;
+}
+.btn-large.waves-effect.waves-light.red.waves-input-wrapper .waves-button-input{
+	background: transparent;
+	border: 0;
 }
 .row-container{
 	padding: 26px 0;
