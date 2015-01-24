@@ -19,10 +19,14 @@
                     mapOptions);
 
                 {{ range $i, $site := . }}
-                    new google.maps.Marker({
+                    var marker = new google.maps.Marker({
                         position: new google.maps.LatLng({{$site.Latitude}}, {{$site.Longitude}}),
                         map: map,
                         title:{{$site.Name}}
+                    });
+
+                    google.maps.event.addListener(marker, 'click', function() {
+                        document.location.href = "/site/{{$site.Id}}"
                     });
                 {{ end }}
             }

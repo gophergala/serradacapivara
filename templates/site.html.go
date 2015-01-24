@@ -33,7 +33,7 @@
             <nav class="transparent" role="navigation">
                 <div class="container">
                     <div class="nav-wrapper">
-                        <a id="logo-container" href="/" class="brand-logo thin-text">
+                        <a id="logo-container" href="javascript:history.back();" class="brand-logo thin-text">
                         Detalhes do Sitio
                         </a>
                         <ul class="side-nav">
