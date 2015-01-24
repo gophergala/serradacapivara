@@ -35,7 +35,7 @@
                         <p class="white-text opaque">
                             Serra da Capivara National Park is a national park in the Northeastern region of Brazil. It has many prehistoric paintings. The park was created to protect the prehistoric artifacts and paintings found there. It became a World Heritage Site in 1991.
                         </p>
-                        <a href="/sites" class="waves-effect waves-dark btn white red-text">I want to know more</a>
+                        <a href="/about" class="waves-effect waves-dark btn white red-text">I want to know more</a>
                     </div>
                 </div>
                 <a class="btn-floating btn-large waves-effect waves-light white">
