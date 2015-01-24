@@ -12,7 +12,7 @@ import (
 
 // Index is the website homepage
 func Index(c web.C, w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles("templates/index.go.html")
+	t, err := template.ParseFiles("templates/index.html.go")
 
 	if err != nil {
 		log.Println(err)
@@ -25,7 +25,7 @@ func Index(c web.C, w http.ResponseWriter, r *http.Request) {
 
 // Search is the page where the results of search are shown
 func Search(c web.C, w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles("templates/search.go.html")
+	t, err := template.ParseFiles("templates/search.html.go")
 
 	if err != nil {
 		log.Println(err)
@@ -43,7 +43,7 @@ func Map(c web.C, w http.ResponseWriter, r *http.Request) {
 
 // Site is the page that describe the given site
 func Site(c web.C, w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles("templates/site.go.html")
+	t, err := template.ParseFiles("templates/site.html.go")
 
 	if err != nil {
 		log.Println(err)
@@ -65,7 +65,7 @@ func Site(c web.C, w http.ResponseWriter, r *http.Request) {
 
 // About the project
 func About(c web.C, w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles("templates/about.go.html")
+	t, err := template.ParseFiles("templates/about.html.go")
 
 	if err != nil {
 		log.Println(err)
