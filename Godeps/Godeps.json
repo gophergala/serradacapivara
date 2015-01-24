@@ -3,6 +3,20 @@
 	"GoVersion": "go1.4",
 	"Deps": [
 		{
+			"ImportPath": "github.com/gorilla/schema",
+			"Rev": "c8422571edf3131506bab7df27e18980fe2598d5"
+		},
+		{
+			"ImportPath": "github.com/jmoiron/sqlx",
+			"Comment": "sqlx-v1.0-67-g69738bd",
+			"Rev": "69738bd209812c5a381786011aff17944a384554"
+		},
+		{
+			"ImportPath": "github.com/lib/pq",
+			"Comment": "go1.0-cutoff-20-g308412e",
+			"Rev": "308412e3e54d78c6411b1d5ef52c0660b921c81b"
+		},
+		{
 			"ImportPath": "github.com/zenazn/goji",
 			"Comment": "v0.8.3-2-g33ec673",
 			"Rev": "33ec673ad9018725008730b291c2f156bf3a6bf5"
