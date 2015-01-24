@@ -4,8 +4,9 @@ import (
 	"encoding/json"
 	"errors"
 	"io/ioutil"
+	"os"
 	"path"
-	"runtime"
+	"path/filepath"
 )
 
 // Site is an archeological site
@@ -43,13 +44,13 @@ func FindByID(id string) (Site, error) {
 
 // Initialize the database
 func init() {
-	_, filename, _, ok := runtime.Caller(1)
+	dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
 
-	if !ok {
+	if err != nil {
 		panic("Something very bad just happen.")
 	}
 
-	file, err := ioutil.ReadFile(path.Join(path.Dir(filename), "data.json"))
+	file, err := ioutil.ReadFile(path.Join(path.Dir(dir), "data.json"))
 
 	if err != nil {
 		panic(err)
