@@ -1,5 +1,8 @@
 @import url('materialize.min.css');
 
+body, html{
+	height: 100%;
+}
 h1, h2, h3, h4, h5, .thin-text{
 	font-weight: 100;
 }
@@ -34,6 +37,19 @@ nav.transparent{
 	height: 450px;
 	margin: 0px;
 	padding: 0px
+}
+#map-canvas.full {
+	height: 90%!important;
+}
+.map-results{
+	position: absolute;
+	z-index: 20;
+}
+.map-results .container{
+	margin-top: 20px;
+}
+.map-results .card{
+	width: 300px;
 }
 .mdi-navigation-menu:before {
 	content: "\e8a1";
