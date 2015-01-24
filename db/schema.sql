@@ -1,4 +1,4 @@
-CREATE TABLE sites (
+CREATE TABLE IF NOT EXISTS sites (
   `id`                integer PRIMARY KEY,
   `name`              varchar,
   `has_picture`       boolean,
@@ -12,22 +12,22 @@ CREATE TABLE sites (
   `location_id`      integer REFERENCES locations(id)
 );
 
-CREATE TABLE cities (
+CREATE TABLE IF NOT EXISTS cities (
   `id`   integer PRIMARY KEY,
   `name` varchar
 );
 
-CREATE TABLE circuits (
+CREATE TABLE IF NOT EXISTS circuits (
   `id`   integer PRIMARY KEY,
   `name` varchar
 );
 
-CREATE TABLE national_parks (
+CREATE TABLE IF NOT EXISTS national_parks (
   `id`   integer PRIMARY KEY,
   `name` varchar
 );
 
-CREATE TABLE locations (
+CREATE TABLE IF NOT EXISTS locations (
   `id`   integer PRIMARY KEY,
   `name` varchar
 );
