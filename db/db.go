@@ -50,7 +50,7 @@ func init() {
 		panic("Something very bad just happen.")
 	}
 
-	file, err := ioutil.ReadFile(path.Join(dir, "data.json"))
+	file, err := ioutil.ReadFile(path.Join(dir, "db/data.json"))
 
 	if err != nil {
 		panic(err)
