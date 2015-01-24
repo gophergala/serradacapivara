@@ -10,12 +10,21 @@
             var map;
             function initialize() {
                 var mapOptions = {
-                    scrollwheel: false,
+                    scrollwheel: true,
                     zoom: 8,
-                    center: new google.maps.LatLng(-34.397, 150.644)
+                    center: new google.maps.LatLng(-8.836630, -42.555310)
                 };
+
                 map = new google.maps.Map(document.getElementById('map-canvas'),
                     mapOptions);
+
+                {{ range $i, $site := . }}
+                    new google.maps.Marker({
+                        position: new google.maps.LatLng({{$site.Latitude}}, {{$site.Longitude}}),
+                        map: map,
+                        title:{{$site.Name}}
+                    });
+                {{ end }}
             }
             
             google.maps.event.addDomListener(window, 'load', initialize);
@@ -28,7 +37,7 @@
                 <div class="container">
                     <div class="nav-wrapper">
                         <a id="logo-container" href="#" class="brand-logo thin-text">
-                        Resultados para "texto"
+                        All Sites
                         </a>
                         <ul class="side-nav">
                             <li><a href="#"><i class="mdi-action-search"></i></a></li>
@@ -39,35 +48,12 @@
                             <li><a href="/">SEARCH</a></li>
                             <li><a href="/map">SITES</a></li>
                         </ul>
-                        <a href="javascript:history.back();">
+                        <a href="#">
                         <i class="mdi-navigation-arrow-back"></i>
                         </a>
                     </div>
                 </div>
             </nav>
-        </div>
-        <div class="map-results">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12 m6">
-                        <div class="card">
-                            <div class="card-content">
-                                <span class="card-title grey-text">Results</span>
-                                <p>Results founded for "texto"</p>
-                                <div class="collection">
-                                    <a href="#!" class="collection-item">Sitio 1</a>
-                                    <a href="#!" class="collection-item active">Sitio 8</a>
-                                    <a href="#!" class="collection-item">Sitio 2</a>
-                                    <a href="#!" class="collection-item">Sitio 14</a>
-                                </div>
-                            </div>
-                            <div class="card-action">
-                                <a href="#">Close</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div id="map-canvas" class="full"></div>
         <footer class="page-footer">

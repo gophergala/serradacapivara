@@ -15,7 +15,7 @@
                         <ul id="slide-out" class="side-nav full">
                             <li><a href="/about">ABOUT</a></li>
                             <li><a href="#index-banner">SEARCH</a></li>
-                            <li><a href="/faq">FAQ</a></li>
+                            <li><a href="/map">SITES</a></li>
                         </ul>
                         <a href="#" data-activates="slide-out" class="button-menu">
                         <i class="mdi-navigation-menu"></i>
@@ -50,7 +50,7 @@
                         <h1 class="header col s12 white-text">
                             Special places need to be shown
                         </h1>
-                        <a href="/sites" id="download-button" class="btn-large waves-effect waves-light red">See all sites</a>
+                        <a href="/map" id="download-button" class="btn-large waves-effect waves-light red">See all sites</a>
                     </div>
                 </div>
             </div>

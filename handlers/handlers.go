@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -38,7 +37,17 @@ func Search(c web.C, w http.ResponseWriter, r *http.Request) {
 
 // Map is the page where all sites are shown at once
 func Map(c web.C, w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Map")
+	t, err := template.ParseFiles("templates/map.html.go")
+
+	if err != nil {
+		log.Println(err)
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		return
+	}
+
+	sites := db.AllSites()
+
+	t.Execute(w, sites)
 }
 
 // Site is the page that describe the given site

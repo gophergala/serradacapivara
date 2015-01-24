@@ -43,8 +43,8 @@
                         </ul>
                         <ul id="slide-out" class="side-nav full">
                             <li><a href="/about">ABOUT US</a></li>
-                            <li><a href="/search">SEARCH</a></li>
-                            <li><a href="/faq">FAQ</a></li>
+                            <li><a href="/">SEARCH</a></li>
+                            <li><a href="/map">SITES</a></li>
                         </ul>
                         <a href="javascript:history.back();">
                         <i class="mdi-navigation-arrow-back"></i>

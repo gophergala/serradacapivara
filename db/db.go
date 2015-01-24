@@ -43,6 +43,10 @@ func FindByID(id string) (Site, error) {
 	return Site{}, errors.New("Site not found")
 }
 
+func AllSites() []Site {
+	return DB
+}
+
 // Initialize the database
 func init() {
 	dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
