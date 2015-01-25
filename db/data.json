@@ -31,8 +31,7 @@
 		"Circuit": "Desfiladeiro da Capivara",
 		"NationalPark": "Capivara",
 		"Location": "Serra da Capivara",
-		"Description": "
-The graphic preparation of our earliest ancestors surprises, the panels of Toca Boqueirão Paraguay, has the human figures made with stylized geometric lines.",
+		"Description": "The graphic preparation of our earliest ancestors surprises, the panels of Toca Boqueirão Paraguay, has the human figures made with stylized geometric lines.",
 		"Pictures": [
 		]
 	},
@@ -43,8 +42,8 @@ The graphic preparation of our earliest ancestors surprises, the panels of Toca 
 		"HasEngraving": true,
 		"IsHistoric": false,
 		"YearOfDiscovery": 1973,
-		"Latitude": "-8.787174",
-		"Longitude": "-42.4861271",
+		"Latitude": "-8.8266",
+		"Longitude": "-42.5447",
 		"City": "Coronel José Dias",
 		"Circuit": "BPF - Sítio do Meio",
 		"NationalPark": "Capivara",
@@ -61,8 +60,8 @@ The graphic preparation of our earliest ancestors surprises, the panels of Toca 
 		"HasEngraving": false,
 		"IsHistoric": false,
 		"YearOfDiscovery": 1996,
-		"Latitude": "-8.787174",
-		"Longitude": "-42.4861271",
+		"Latitude": "-8.773807",
+		"Longitude": "-42.493509",
 		"City": "Coronel José Dias",
 		"Circuit": "Desfiladeiro da Capivara",
 		"NationalPark": "Capivara",
