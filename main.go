@@ -17,7 +17,5 @@ func main() {
 
 	// Static
 	goji.Get("/static/*", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-	goji.Get("/layout/*", http.StripPrefix("/layout/", http.FileServer(http.Dir("layout"))))
-
 	goji.Serve()
 }
