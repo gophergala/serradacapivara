@@ -11,7 +11,7 @@
             function initialize() {
                 var mapOptions = {
                     scrollwheel: true,
-                    zoom: 8,
+                    zoom: 12,
                     center: new google.maps.LatLng(-8.836630, -42.555310)
                 };
 
