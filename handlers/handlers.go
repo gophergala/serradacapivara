@@ -4,6 +4,7 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"strings"
 
 	"github.com/gophergala/serradacapivara/db"
 	"github.com/zenazn/goji/web"
@@ -25,6 +26,10 @@ func Index(c web.C, w http.ResponseWriter, r *http.Request) {
 // Search is the page where the results of search are shown
 func Search(c web.C, w http.ResponseWriter, r *http.Request) {
 	t, err := template.ParseFiles("templates/search.html.go")
+	params := r.URL.Query()
+
+	query := params.Get("q")
+	query = strings.ToUpper(query)
 
 	if err != nil {
 		log.Println(err)
@@ -32,7 +37,19 @@ func Search(c web.C, w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	t.Execute(w, nil)
+	var sites []db.Site
+
+	for _, site := range db.AllSites() {
+		if strings.Contains(strings.ToUpper(site.Name), query) || strings.Contains(strings.ToUpper(site.Description), query) {
+			sites = append(sites, site)
+		}
+	}
+
+	data := make(map[string]interface{})
+	data["sites"] = sites
+	data["query"] = params.Get("q")
+
+	t.Execute(w, data)
 }
 
 // Map is the page where all sites are shown at once
