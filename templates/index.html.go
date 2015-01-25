@@ -14,7 +14,7 @@
                         <a id="logo-container" href="/" class="brand-logo thin-text">Serra da Capivara</a>
                         <ul id="slide-out" class="side-nav full">
                             <li><a href="/about">ABOUT</a></li>
-                            <li><a href="#index-banner">SEARCH</a></li>
+                            <li><a href="/#index-banner">SEARCH</a></li>
                             <li><a href="/map">SITES</a></li>
                         </ul>
                         <a href="#" data-activates="slide-out" class="button-menu">

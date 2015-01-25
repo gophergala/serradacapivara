@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Serra da Capivara</title>
+        <title>{{.Name}}</title>
         <meta charset="utf-8" />
         <link type="text/css" rel="stylesheet" href="/static/css/layout.css"  media="screen,projection"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
@@ -37,9 +37,8 @@
                         {{.Name}}
                         </a>
                         <ul class="side-nav">
-                            <li><a href="#"><i class="mdi-action-search"></i></a></li>
-                            <li><a href="#"><i class="mdi-social-share"></i></a></li>
-                            <li><a href="#"  data-activates="slide-out" class="button-menu"><i class="mdi-navigation-more-vert"></i></a></li>
+                            <li><a href="/#index-banner"><i class="mdi-action-search"></i></a></li>
+                            <li><a href="#" data-activates="slide-out" class="button-menu"><i class="mdi-navigation-more-vert"></i></a></li>
                         </ul>
                         <ul id="slide-out" class="side-nav full">
                             <li><a href="/about">ABOUT US</a></li>

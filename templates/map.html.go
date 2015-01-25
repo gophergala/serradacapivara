@@ -44,7 +44,7 @@
                         All Sites
                         </a>
                         <ul class="side-nav">
-                            <li><a href="#"><i class="mdi-action-search"></i></a></li>
+                            <li><a href="/#index-banner"><i class="mdi-action-search"></i></a></li>
                             <li><a href="#"  data-activates="slide-out" class="button-menu"><i class="mdi-navigation-more-vert"></i></a></li>
                         </ul>
                         <ul id="slide-out" class="side-nav full">

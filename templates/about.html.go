@@ -18,14 +18,12 @@
           </a>
 
           <ul class="side-nav">
-            <li><a href="#"><i class="mdi-social-share"></i></a></li>
             <li><a href="#"  data-activates="slide-out" class="button-menu"><i class="mdi-navigation-more-vert"></i></a></li>
           </ul>
 
          <ul id="slide-out" class="side-nav full">
               <li><a href="/about">ABOUT</a></li>
               <li><a href="/#index-banner">SEARCH</a></li>
-              <li><a href="/faq">FAQ</a></li>
           </ul>
 
           <a href="/">
