@@ -41,7 +41,7 @@
                 <div class="container">
                     <div class="nav-wrapper">
                         <a id="logo-container" href="#" class="brand-logo thin-text">
-                        Resultados para "{{.query}}"
+                        Results for "{{.query}}"
                         </a>
                         <ul class="side-nav">
                             <li><a href="/#index-banner"><i class="mdi-action-search"></i></a></li>
