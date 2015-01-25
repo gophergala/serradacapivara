@@ -12,10 +12,82 @@
 		"Circuit": "BPF - Sítio do Meio",
 		"NationalPark": "Capivara",
 		"Location": "Serra Talhada",
-		"Description": "A Toca do Boqueirão da Pedra Furada encontra-se a 19 metros acima do nível do vale, protegida por grandes blocos originários do desmoronamento do paredão rochoso. Sua formação deve-se, como em todos os sítios da região, à erosão que cava a base da parede, formando uma projeção que serve de teto. O processo de formação das camadas arqueológicas deste sítio durou, no mínimo, 60.000 anos. As escavações, iniciadas em 1978, duraram 10 anos e permitiram a descoberta dos mais antigos vestígios, até hoje conhecidos, da presença humana nas Américas: fogueiras estruturadas e uma grande quantidade de artefatos de pedra lascada. Blocos de parede com pinturas, caídos sobre as camadas arqueológicas, permitiram a datação das mesmas. Os vestígios mais antigos são duas manchas vermelhas datadas de 23.000 anos, dois segmentos paralelos de reta datam de 17.000 anos, enquanto que pinturas representando temas semelhantes aos que subsistem hoje nas paredes, foram pintadas entre 12.000 e 6.000 anos atrás. Nesse sítio foi possível reconstruir a história das ocupações humanas desde há cerca de 60.000 anos até 6.000 anos atrás. (fumdham.org.br) ",
+		"Description": "The Toca do Boqueirao da Pedra Furada is 19 meters above the level of the valley, protected by large blocks originating from the collapse of the rock wall. Its formation is due, as in all sites in the region, erosion the base of the wall, forming a projection that serves as a ceiling. The process of formation of the archaeological layers of this site lasted at least 60,000 years. The excavations, which began in 1978, lasted 10 years and led to the discovery of the oldest remains, to this day known, the human presence in the Americas: structured fires and a lot of chipped stone artifacts. Building blocks with paintings, fallen on the archaeological layers, allowed the dating of the same. The oldest traces are two red spots dated 23,000 years, two parallel segments of straight dating back 17,000 years, while paintings of similar subjects to those who remain today the walls were painted between 12,000 and 6,000 years ago. This site was possible to reconstruct the history of human occupation for nearly 60,000 years to 6,000 years ago. (http://wwww.fumdham.org.br) ",
 		"Pictures": [
 			"http://media.escola.britannica.com.br/eb-media/36/160836-050-5EB7143E.jpg",
 			"http://4.bp.blogspot.com/_cTmxPMqFfrU/S_abos-1COI/AAAAAAAAAEE/XaN77MU6NqU/s1600/_MG_6152.jpg"
+		]
+	},
+	{
+		"Id": "toca-do-paraguaio",
+		"Name": "Toca do Paraguaio",
+		"HasPicture": true,
+		"HasEngraving": true,
+		"IsHistoric": false,
+		"YearOfDiscovery": 1973,
+		"Latitude": "-8.787174",
+		"Longitude": "-42.4861271",
+		"City": "Coronel José Dias",
+		"Circuit": "Desfiladeiro da Capivara",
+		"NationalPark": "Capivara",
+		"Location": "Serra da Capivara",
+		"Description": "
+The graphic preparation of our earliest ancestors surprises, the panels of Toca Boqueirão Paraguay, has the human figures made with stylized geometric lines.",
+		"Pictures": [
+		]
+	},
+	{
+		"Id": "sitio-do-meio",
+		"Name": "Sítio do Meio",
+		"HasPicture": true,
+		"HasEngraving": true,
+		"IsHistoric": false,
+		"YearOfDiscovery": 1973,
+		"Latitude": "-8.787174",
+		"Longitude": "-42.4861271",
+		"City": "Coronel José Dias",
+		"Circuit": "BPF - Sítio do Meio",
+		"NationalPark": "Capivara",
+		"Location": "Serra Talhada",
+		"Description": "One of the most important sites of the park. Here were found 8960 years of pottery fragments, considered the oldest in the Americas, and a polished stone ax 9,200 years.",
+		"Pictures": [
+			"http://static.panoramio.com/photos/large/64259025.jpg"
+		]
+	},
+	{
+		"Id": "veadinhos-azuis",
+		"Name": "Veadinhos Azuis ",
+		"HasPicture": true,
+		"HasEngraving": false,
+		"IsHistoric": false,
+		"YearOfDiscovery": 1996,
+		"Latitude": "-8.787174",
+		"Longitude": "-42.4861271",
+		"City": "Coronel José Dias",
+		"Circuit": "Desfiladeiro da Capivara",
+		"NationalPark": "Capivara",
+		"Location": "Serra da Capivara",
+		"Description": "Located on top of the Chapada da Capivara, this site was the first in the world to be discovered containing figures painted with the color blue.",
+		"Pictures": [
+			"http://static.panoramio.com/photos/large/64213728.jpg"
+		]
+	},
+	{
+		"Id": "baixao-das-andorinhas",
+		"Name": "Baixão das Andorinhas",
+		"HasPicture": true,
+		"HasEngraving": false,
+		"IsHistoric": false,
+		"YearOfDiscovery": 1980,
+		"Latitude": "-8.862443",
+		"Longitude": "-42.687360",
+		"City": "São Raimundo Nonato",
+		"Circuit": "",
+		"NationalPark": "Capivara",
+		"Location": "Serra Vermelha",
+		"Description": "The show this canyon 90 meters deep is due to the swallows descend swiftly flying to their nests located in the crevices of the rock wall.",
+		"Pictures": [
+			"http://c1.staticflickr.com/9/8039/7940206102_5f5d31ef31_b.jpg"
 		]
 	}
 ]
