@@ -34,7 +34,7 @@
                 <div class="container">
                     <div class="nav-wrapper">
                         <a id="logo-container" href="javascript:history.back();" class="brand-logo thin-text">
-                        Detalhes do Sitio
+                        {{.Name}}
                         </a>
                         <ul class="side-nav">
                             <li><a href="#"><i class="mdi-action-search"></i></a></li>
