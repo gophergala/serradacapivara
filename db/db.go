@@ -7,6 +7,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"strings"
 )
 
 // Site is an archeological site
@@ -45,6 +46,18 @@ func FindByID(id string) (Site, error) {
 
 func AllSites() []Site {
 	return DB
+}
+
+func Search(query string) []Site {
+	var sites []Site
+
+	for _, site := range AllSites() {
+		if strings.Contains(strings.ToUpper(site.Name), query) || strings.Contains(strings.ToUpper(site.Description), query) {
+			sites = append(sites, site)
+		}
+	}
+
+	return sites
 }
 
 // Initialize the database

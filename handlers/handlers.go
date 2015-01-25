@@ -37,13 +37,7 @@ func Search(c web.C, w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var sites []db.Site
-
-	for _, site := range db.AllSites() {
-		if strings.Contains(strings.ToUpper(site.Name), query) || strings.Contains(strings.ToUpper(site.Description), query) {
-			sites = append(sites, site)
-		}
-	}
+	sites := db.Search(query)
 
 	data := make(map[string]interface{})
 	data["sites"] = sites
